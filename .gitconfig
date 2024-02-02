@@ -1,0 +1,8 @@
+[user]
+	name = ChosunOne
+	email = chosunone@protonmail.com
+	signingkey = 0DBAD7667A083571
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = true

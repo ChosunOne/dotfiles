@@ -104,6 +104,14 @@ source $ZSH/oh-my-zsh.sh
 alias sudo="sudo "
 alias vim="nvim"
 alias vi="nvim"
+alias fman="compgen -c | fzf | xargs man"
+alias ftldr="compgen -c | fzf | xargs tldr"
+alias k8pods="kubectl get pods -A --no-headers | fzf | awk '{print $2, $1}' | xargs -n 2 sh -c 'kubectl describe pod $0 -n $1'"
+alias lsbig="du -ah . | sort -hr | head -n 10"
+find_cargo_dir() {
+  fd -t d . --exec test -f {}/Cargo.toml \; -x echo {} | fzf --preview "cat {}/Cargo.toml"
+}
+alias cdc='cd "$(find_cargo_dir)"'
 
 # fnm
 export PATH="/home/chosunone/.local/share/fnm:$PATH"

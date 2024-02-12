@@ -18,4 +18,6 @@ vim.diagnostic.config({
   virtual_text = false
 })
 
+vim.wo.relativenumber = true
+
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]

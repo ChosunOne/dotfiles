@@ -9,6 +9,12 @@ M.general = {
   }
 }
 
+M.terminal = {
+  t = {
+    ["<C-t>"] = { "<C-\\><C-n>", "Exit terminal mode" },
+  }
+}
+
 M.dap = {
   plugin = true,
   n = {

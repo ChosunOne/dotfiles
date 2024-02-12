@@ -1,4 +1,4 @@
--- This file contains overrides for all settings.  If you want something to be potentitally overridden, use init.lua
+-- This file contains overrides for all settings.  If you want something to be potentially overridden, use init.lua
 ---@type ChadrcConfig
 local M = {}
 

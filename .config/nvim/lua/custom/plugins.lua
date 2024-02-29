@@ -7,6 +7,10 @@ local plugins = {
     opts = overrides.nvimtree,
   },
   {
+    "nvim-telescope/telescope.nvim",
+    opts = overrides.telesclope,
+  },
+  {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
   },
@@ -44,7 +48,6 @@ local plugins = {
         "black",
         "debugpy",
         "mypy",
-        "ruff",
         "rust-analyzer",
         "pyright",
         "clangd",
@@ -75,6 +78,7 @@ local plugins = {
         "helm-ls",
         "lean-language-server",
         "mdformat",
+        "ruff-lsp"
       }
     }
   },
@@ -176,6 +180,10 @@ local plugins = {
       table.insert(M.sources, {name = "crates"})
       return M
     end,
+  },
+  {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    build = "make"
   },
 }
 

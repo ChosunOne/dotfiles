@@ -3,7 +3,6 @@ local none_ls = require('null-ls')
 
 local opts = {
   sources = {
-    none_ls.builtins.formatting.clang_format,
     none_ls.builtins.formatting.black,
     none_ls.builtins.diagnostics.mypy.with({
       extra_args = function ()
@@ -11,7 +10,6 @@ local opts = {
         return { "--python-executable", virtual .. "/bin/python3" }
       end
     }),
-    none_ls.builtins.diagnostics.ruff,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then

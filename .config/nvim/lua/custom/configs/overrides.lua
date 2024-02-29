@@ -24,6 +24,18 @@ M.nvimtree = {
   }
 }
 
+M.telescope = {
+  extensions_list = { "fzf" },
+  extensions = {
+    fzf = {
+      fuzzy = true,
+      override_generic_sorter = true,
+      override_file_sorter = true,
+      case_mode = "smart_case",
+    }
+  }
+}
+
 M.treesitter = {
   ensure_installed = {
     -- defaults
@@ -92,7 +104,7 @@ M.treesitter = {
     "markdown",
     "comment",
 
-    -- tools 
+    -- tools
     "gpg",
     "regex",
 

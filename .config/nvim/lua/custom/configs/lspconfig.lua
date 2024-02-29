@@ -8,6 +8,28 @@ local util = require("lspconfig/util")
 lspconfig.pyright.setup({
   on_attach = on_attach,
   capabilities = capabilities,
+  filetypes = {"python"},
+  settings = {
+    pyright = {
+      disableOrganizeImports = true,
+    },
+    python = {
+      analysis = {
+        ignore = { "*" },
+      },
+    },
+  },
+})
+
+local on_attach_ruff = function(client, bufnr)
+  if client.name == "ruff_lsp" then
+    client.server_capabilities.hoverProvider = false
+  end
+end
+
+lspconfig.ruff_lsp.setup({
+  on_attach = on_attach_ruff,
+  capabilities = capabilities,
   filetypes = {"python"}
 })
 

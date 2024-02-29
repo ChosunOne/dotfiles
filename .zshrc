@@ -128,3 +128,4 @@ export EDITOR="/usr/bin/nvim"
 [[ ! -r /home/chosunone/.opam/opam-init/init.zsh ]] || source /home/chosunone/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 export PATH="/home/chosunone/.local/share/gem/ruby/3.0.0/bin:$PATH"
+eval "$(zoxide init --cmd cd zsh)"

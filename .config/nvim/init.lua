@@ -65,6 +65,7 @@ vim.opt.scrolloff = 10
 
 -- Set to use spaces instead of tabs
 vim.opt.expandtab = true
+vim.opt.tabstop = 4
 -- vim.opt.softtabstop = 4
 -- vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
@@ -640,10 +641,30 @@ require('lazy').setup({
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
-
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
     config = function()
+      -- Set up surround options
+      local surround = require 'mini.surround'
+      surround.setup {
+        custom_surroundings = nil,
+        highlight_duration = 500,
+        mappings = {
+          add = 'sa',
+          delete = 'sd',
+          find = 'sf',
+          find_left = 'sF',
+          highlight = 'sh',
+          replace = 'sr',
+          update_n_lines = 'sn',
+          suffix_last = 'l',
+          suffix_next = 'n',
+        },
+        n_lines = 20,
+        respect_selection_type = false,
+        search_method = 'cover',
+        silent = false,
+      }
       -- Simple and easy statusline.
       local statusline = require 'mini.statusline'
       -- set use_icons to true if you have a Nerd Font

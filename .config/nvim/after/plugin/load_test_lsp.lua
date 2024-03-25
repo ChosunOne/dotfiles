@@ -1,0 +1,16 @@
+-- local client = vim.lsp.start_client {
+--   name = 'educational_lsp_rust',
+--   cmd = { '/home/chosunone/source/educational_lsp_rust/target/release/educational_lsp_rust' },
+-- }
+--
+-- if not client then
+--   vim.notify 'Failed to find educational_lsp_rust'
+--   return
+-- end
+--
+-- vim.api.nvim_create_autocmd('FileType', {
+--   pattern = 'markdown',
+--   callback = function()
+--     vim.lsp.buf_attach_client(0, client)
+--   end,
+-- })

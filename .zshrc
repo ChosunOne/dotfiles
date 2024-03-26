@@ -129,3 +129,7 @@ export EDITOR="/usr/bin/nvim"
 
 export PATH="/home/chosunone/.local/share/gem/ruby/3.0.0/bin:$PATH"
 eval "$(zoxide init --cmd cd zsh)"
+
+export LANG=en_US.UTF-8
+export LC_COLLATE=C
+setopt COMBINING_CHARS

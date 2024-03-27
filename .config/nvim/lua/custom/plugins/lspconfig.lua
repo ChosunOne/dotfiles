@@ -111,6 +111,8 @@ return {
       local servers = {
         clangd = {},
         black = {},
+        autoflake = {},
+        autopep8 = {},
         gopls = {},
         docker_compose_language_service = {},
         dockerls = {},

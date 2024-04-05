@@ -22,6 +22,8 @@ return {
 
       -- Useful for getting pretty icons, but requires a Nerd Font.
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+      -- Search code snippets
+      { 'benfowler/telescope-luasnip.nvim', dependencies = 'L3MON4D3/LuaSnip' },
     },
     config = function()
       -- Two important keymaps to use while in Telescope are:
@@ -54,6 +56,7 @@ return {
       -- Enable Telescope extensions if they are installed
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
+      pcall(require('telescope').load_extension, 'luasnip')
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
@@ -90,6 +93,9 @@ return {
       vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
+
+      -- Shortcut for searching through available code snippets
+      vim.keymap.set('n', '<leader>sp', '<cmd>Telescope luasnip<CR>', { desc = '[S]earch Sni[P]pets' })
     end,
   },
 }

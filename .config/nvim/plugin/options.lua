@@ -63,7 +63,14 @@ vim.opt.smartindent = true
 
 -- Enable spell check
 vim.opt.spell = true
-
+vim.api.nvim_create_autocmd('TermOpen', {
+  pattern = '*',
+  callback = function()
+    vim.opt_local.spell = false
+    vim.opt_local.number = false
+    vim.opt_local.relativenumber = false
+  end,
+})
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 

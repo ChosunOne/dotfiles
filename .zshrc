@@ -1,3 +1,8 @@
+# Wayland settings
+GBM_BACKEND=nvidia-drm
+__GLX_VENDOR_LIBRARY_NAME=nvidia
+__GL_THREADED_OPTIMIZATIONS=0
+
 # Set the directory for zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -67,4 +72,4 @@ if [ -d "$FNM_PATH" ]; then
 fi
 
 eval "$(fnm completions --shell zsh)"
-eval "$(starship init zsh)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"

@@ -19,8 +19,6 @@ return {
         python = { 'autopep8', 'isort', 'autoflake', 'black', 'ruff_format' },
         go = { 'gofmt' },
         rust = { 'rustfmt' },
-        markdown = { 'mdformat' },
-        yaml = { 'yamlfmt' },
         javascript = { 'prettierd' },
         --
         -- You can use a sub-list to tell conform to run *until* a formatter

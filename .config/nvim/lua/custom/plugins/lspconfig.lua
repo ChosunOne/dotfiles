@@ -121,6 +121,9 @@ return {
               check = {
                 command = 'clippy',
               },
+              cargo = {
+                features = 'all',
+              },
             },
           },
         },
@@ -129,16 +132,16 @@ return {
         marksman = {},
         bashls = {},
         cmake = {},
-        java_language_server = {},
+        jdtls = {},
         jsonls = {},
         mesonlsp = {},
         vimls = {},
         wgsl_analyzer = {},
-        yamlls = {},
         prettierd = {},
         texlab = {},
+        zls = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
-        tsserver = {},
+        ts_ls = {},
         --
 
         lua_ls = {

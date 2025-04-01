@@ -1,3 +1,4 @@
+HOMEBREW_NO_ANALYTICS=1
 # Wayland settings
 __GL_THREADED_OPTIMIZATIONS=0
 
@@ -61,14 +62,7 @@ bindkey '^n' history-search-forward
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-
-# fnm
-FNM_PATH="/home/chosunone/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/chosunone/.local/share/fnm:$PATH"
-  eval "`fnm env --use-on-cd`"
-fi
-
+eval "$(fnm env --use-on-cd --shell zsh)"
 eval "$(fnm completions --shell zsh)"
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 eval "$(direnv hook zsh)"

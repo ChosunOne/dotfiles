@@ -89,9 +89,11 @@
 					"${pkgs.wezterm}/Applications/wezterm.app"
 					"${pkgs.spotify}/Applications/Spotify.app"
 					"${pkgs.librewolf}/Applications/LibreWolf.app"
+					"/Applications/Firefox.app"
 					"/Applications/1Password.app"
 					"/System/Applications/System Settings.app"
 					"/System/Applications/Launchpad.app"
+					"/System/Applications/Mail.app"
 				];
 				finder.FXPreferredViewStyle = "clmv";
 				loginwindow.GuestEnabled = false;

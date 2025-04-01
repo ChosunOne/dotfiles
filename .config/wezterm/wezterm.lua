@@ -10,10 +10,12 @@ config.color_schemes = {
 	["catppuccin-black"] = dark_catppuccin,
 }
 config.color_scheme = "catppuccin-black"
-config.font_size = 18
+config.font_size = 28
 config.font = wezterm.font("FiraCode Nerd Font Mono")
 config.front_end = "WebGpu"
 
+config.enable_kitty_keyboard = true
+config.enable_kitty_graphics = true
 config.leader = { key = " ", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
 	{
@@ -26,7 +28,7 @@ config.keys = {
 	{
 		key = "c",
 		mods = "CTRL|LEADER",
-		action = wezterm.action.SpawnTab("DefaultDomain"),
+		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
 	},
 	{
 		key = "h",
@@ -37,6 +39,11 @@ config.keys = {
 		key = "l",
 		mods = "META|SHIFT",
 		action = wezterm.action.ActivateTabRelative(1),
+	},
+	{
+		key = "Delete",
+		mods = "NONE",
+		action = wezterm.action.SendKey({ key = "Delete" }),
 	},
 }
 

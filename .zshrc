@@ -71,3 +71,5 @@ fi
 
 eval "$(fnm completions --shell zsh)"
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+eval "$(direnv hook zsh)"
+export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock

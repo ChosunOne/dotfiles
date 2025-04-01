@@ -110,9 +110,8 @@ return {
         gopls = {},
         docker_compose_language_service = {},
         dockerls = {},
-        pyright = {},
+        basedpyright = {},
         isort = {},
-        ruff_lsp = {},
         -- see https://github.com/rust-lang/rust-analyzer/blob/master/docs/user/generated_config.adoc and
         -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer for help on configuring rust analyzer
         rust_analyzer = {
@@ -123,6 +122,14 @@ return {
               },
               cargo = {
                 features = 'all',
+              },
+              imports = {
+                prefix = 'crate',
+              },
+              semanticHighlighting = {
+                strings = {
+                  enable = false,
+                },
               },
             },
           },

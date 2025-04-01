@@ -48,6 +48,11 @@
 					pkgs.librewolf
 					pkgs.protonmail-bridge
 					pkgs.nerd-fonts.fira-code
+					pkgs.jujutsu
+					pkgs.lean4
+					pkgs.discord
+					pkgs.bruno
+					pkgs.bruno-cli
 				];
 
 			homebrew = {
@@ -89,8 +94,11 @@
 					"${pkgs.wezterm}/Applications/wezterm.app"
 					"${pkgs.spotify}/Applications/Spotify.app"
 					"${pkgs.librewolf}/Applications/LibreWolf.app"
+					"${pkgs.discord}/Applications/Discord.app"
 					"/Applications/Firefox.app"
 					"/Applications/1Password.app"
+					"/Applications/Signal.app"
+					"/Applications/Podman Desktop.app"
 					"/System/Applications/System Settings.app"
 					"/System/Applications/Launchpad.app"
 					"/System/Applications/Mail.app"
